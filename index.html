@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scary Town | Professional Monitoring Dashboard By Spy Master</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="spy-style.css">
+    <script src="spy-scripts.js" defer></script>
+    <style>
+        /* تحسينات بصرية للجداول: إضاءة الألوان وتنسيق متناسق وواضح غير عشوائي أو معتم */
+        .table-wrapper table {
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            width: 100%;
+        }
+        .table-wrapper th {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.25), rgba(59, 30, 30, 0.95));
+            color: #ffffff;
+            padding: 16px 20px;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            border-bottom: 3px solid #ff0000;
+            text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+        }
+        .table-wrapper td {
+            background: rgba(59, 30, 30, 0.75);
+            padding: 14px 20px;
+            color: #f1f5f9;
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .table-wrapper tr:hover td {
+            background: rgba(255, 0, 0, 0.12);
+            border-color: rgba(255, 0, 0, 0.4);
+            color: #ffffff;
+            transform: scale(1.003);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .table-wrapper tr.table-separator td {
+            background: linear-gradient(90deg, rgba(255, 0, 0, 0.3), rgba(42, 15, 15, 0.8));
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 15px;
+            text-align: right;
+            padding: 12px 18px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            text-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+        }
+        .badge-luxury {
+            background: linear-gradient(135deg, #ff0000, #ff0000);
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+            <img src="images/Group-37.gif" alt="Logo">
+            <span>Scary Town - الرقابة</span>
+        </div>
+        <div class="links">
+            <a href="#" onclick="showPage('home')">الرئيسية</a>
+            <a href="#" onclick="showPage('Rules')">قوانين الرقابة</a>
+            <a href="#" onclick="showPage('clauses')">إدارة الرقابة</a>
+            <a href="#" onclick="showPage('laws')">بنود ونقاط الرقابة</a>
+            <a href="#" onclick="showPage('escape')">بروتوكولات الرقابة</a>
+        
+        </div>
+    </nav>
+<div id="home" class="page active">
+        <div class="hero">
+            <h1>مرحباً بك في نظام الرقابة</h1>
+            <p>دليل إدارة الرقابة لسيرفر Scary Town</p>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px;">
+                <button class="btn" onclick="showPage('Rules')">القوانين</button>
+                <a href="https://st-alshiekh.github.io/BannedTeam/" class="btn">جدول الباندات</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Rules" class="page">
+
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-header">
+                    <h3>المراقبة</h3>
+                    <small>
+    <p><strong>الحيادية:</strong> يجب التعامل مع جميع اللاعبين دون أي تحيز أو مجاملة، واتخاذ جميع القرارات بناءً على الأدلة فقط.</p>
+
+    <p>يلتزم الرقابي بالمحافظة على سرية جميع الإجراءات الإدارية وعدم مشاركة أي معلومات داخلية مع أي شخص غير مخول بذلك.</p>
+
+    <p><strong>الاحترافية:</strong> يجب احترام جميع اللاعبين أثناء التعامل معهم، ويمنع استخدام الألفاظ المسيئة أو الاستفزاز أو إساءة استغلال الصلاحيات.</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة المراقب</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار إداري</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>خصم نقاط</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>سحب الصلاحيات</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">القوانين الرقابية العامة</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>حقوق اللاعبين الإدارية</h3>
+                    <small>
+    <p><strong>المهام اليومية المطلوبة:</strong></p>
+
+    <p>• مراقبة عامة لمدة لا تقل عن ساعة يومياً.</p>
+
+    <p>• استلام تذاكر الشكاوى الخاصة باللاعبين والعمل على حلها.</p>
+
+    <p>• عند بدء المراقبة يجب التواجد داخل رومات الرقابة.</p>
+
+    <p>• مراقبة جميع السيناريوهات والتأكد من تطبيق القوانين بشكل صحيح.</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة المراقب</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى  </span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار إداري</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>خصم نقاط</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>سحب الصلاحيات</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">المهام اليومية للرقابي</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>قواعد التعامل مع أعضاء السيرفر</h3>
+                    <small>
+   <p><strong>المهام الأسبوعية المطلوبة:</strong></p>
+
+    <p>• يجب إرفاق 15 محاسبة على الأقل أسبوعياً.</p>
+
+    <p>• يجب استلام 10 تذاكر شكوى على الأقل والعمل على حلها بشكل كامل إن وجدت.</p>
+
+    <p>• يجب تسجيل الدخول بشكل يومي بشخصية الرقابة.</p>
+
+    <p>• الالتزام بجميع التعليمات والتحديثات الإدارية الصادرة من الإدارة العليا.</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة المراقب</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار إداري</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>خصم نقاط</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>سحب صلاحيات</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">المهام الأسبوعية والالتزامات</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>الرصد الاحترافي والمتابعة</h3>
+                    <small>
+                        <p>يحق لك رصد المخالفة وتوثيقها بشكل فوري في حال رصد أي تجاوز صريح لقوانين سيرفر Scary Town.</p>
+                        <p style="color: #ff4b2b; font-weight: bold;">تنبيه!! الالتزام بدقة التقارير ورفعها في وقتها المحدد</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة المراقب</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار إداري</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>خصم نقاط</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>إعفاء من المنصب بشكل كامل</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">المخالفات و توثيقها</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>آلية التعامل مع التجاوزات الميدانية</h3>
+                    <small>
+                        <p>يتم تمرير التنبيهات اللازمة للمخالف واتخاذ الإجراء المناسب.</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة المراقب</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار إداري</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>خصم نقاط</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>سحب صلاحيات</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">التعامل مع التجاوزات</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>حدود وساعات العمل المطلوبة</h3>
+                    <small>
+                        <p>الحد الأدنى لساعات الرقابة الأسبوعية المطلوبة منك</p>
+                        <p>الحد الأدنى لنقاط التفاعل الأسبوعية المطلوبة منك</p>
+                    </small>
+                </div>
+                <div class="punishment-box">
+                    <span class="punishment-label">مخالفة الرقابي</span>
+                    <div class="punishment-grid">
+                        <div class="step"><span>المرة الأولى</span><strong>تحذير</strong></div>
+                        <div class="step"><span>المرة الثانية</span><strong>انذار إداري</strong></div>
+                        <div class="step"><span>المرة الثالثة</span><strong>خصم نقاط</strong></div>
+                        <div class="step"><span>المرة الرابعة</span><strong>إعفاء من المسؤولية بشكل كامل</strong></div>
+                    </div>
+                </div>
+                <div class="card-footer">المهام المطلوبه</div>
+            </div>
+        </div>
+    </div>
+
+ 
+        <div id="clauses" class="page">
+            <h2 style="border-right: 4px solid var(--accent); padding-right: 15px; margin-bottom:20px;">منسوبي إدارة الرقابة </h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الأسم</th>
+                            <th>الرتبة</th>
+                            <th>المسؤوليات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-separator">
+                            <td colspan="3">Report Manager & Assistants</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #ffffff; font-size: 15px;">ST | abo soso</strong></td>
+                            <td><span class="badge-luxury">Report Manager</span></td>
+                            <td><span class="badge-luxury">إدارة المسؤولية بشكل كامل و مراقبة منسوبيها</span></td>
+
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #ffffff; font-size: 15px;">Noone</strong></td>
+                            <td><span class="badge-luxury">Assistant Report Manager</span></td>
+                            <td><span class="badge-luxury">المساعدة في إدارة المسؤولية</span></td>
+
+                        </tr>
+                        
+                        <tr class="table-separator">
+                            <td colspan="3">Supervisors</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #ffffff; font-size: 15px;">ST | 𝑀𝒶𝓇𝓈𝒽𝒶𝓁𝓁</strong></td>
+                            <td><span class="badge-luxury">Supervisor</span></td>
+                            <td><span class="badge-luxury">الإشراف والمتابعة الميدانية </span></td>
+
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #ffffff; font-size: 15px;">ST | 𝐀𝐥-𝐒𝐡𝐢𝐞𝐤𝐡</strong></td>
+                            <td><span class="badge-luxury">Supervisor</span></td>
+                            <td><span class="badge-luxury">الإشراف والمتابعة الميدانية </span></td>
+
+                        </tr>
+
+    <tr>
+                            <td><strong style="color: #ffffff; font-size: 15px;">ST | Just Maan</strong></td>
+                            <td><span class="badge-luxury">Supervisor</span></td>
+                            <td><span class="badge-luxury">الإشراف والمتابعة الميدانية </span></td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="laws" class="page">
+            <h2 style="border-right: 4px solid #00d9ff; padding-right: 15px; margin-bottom:20px; color: #fff; text-shadow: 0 0 10px #00d9ff;">لوحة مخالفات بنود وساعات ونقاط الرقابة</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>اعضاء الرقابة</th>
+                            <th>الساعات / النقاط</th>
+                            <th>المحاسبة المترتبه</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+
+
+                    <!--    يا اخوان هنا الجدول لا تبعصو شي فوق او تحت فقط هناااا الجدول       -->
+                    
+                    
+
+
+
+
+
+
+                        <tr class="table-separator">
+                            <td colspan="3">ساعات ونقاط فريق الرقابة الإدارية</td>
+                        </tr>
+                          <tr>
+                            <td><strong style="color:#ffffff;">ST | 𝐀𝐥-𝐒𝐡𝐢𝐞𝐤𝐡</strong> ( Supervisor )</td>
+                            <td><span style="color:#38bdf8; font-weight:bold;">سوتومية ساعة</span> / <span style="color:#4ade80; font-weight:bold;">19999 نقطة</span></td>
+                            <td> الإشراف والمتابعة الميدانية </td>
+                        </tr>
+
+                        
+                        <tr> <!--  تنسخو من هنا -->
+                            <td><strong style="color:#ffffff;">ST | 𝑀𝒶𝓇𝓈𝒽𝒶𝓁𝓁 [</strong> (Supervisor)</td>
+                            <td><span style="color:#38bdf8; font-weight:bold;"> خوموسوميه ساعة</span> / <span style="color:#4ade80; font-weight:bold;">10000 نقطة</span></td>
+                            <td>الإشراف والمتابعة الميدانية</td>
+                        </tr>
+                            <!-- لين هنا فقططططططططط  -->
+
+                         <tr>
+                            <td><strong style="color:#ffffff;">ST | Just Maan</strong> ( Supervisor )</td>
+                            <td><span style="color:#38bdf8; font-weight:bold;">اربعومية ساعة</span> / <span style="color:#4ade80; font-weight:bold;">19999 نقطة</span></td>
+                            <td> الإشراف والمتابعة الميدانية </td>
+                        </tr>
+
+
+
+
+
+
+
+
+
+
+
+                    <!--  لا تنزل تحت اكثر عشان لا ادق وجهك   -->
+
+
+
+
+
+
+
+
+
+
+
+
+                        <tr class="table-separator">
+                            <td colspan="3">مخالفات إدارية من الدرجة الأولى (عاديه)</td>
+                        </tr>
+                        <tr><td>اهمال المهام الرقابية</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>عدم الالتزام بقواعد السيرفر العامة</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>استخدام الصلاحيات بدون سبب</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>تكرار تأخير الرد على البلاغات</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>القيام بأعمال إدارية بدون إذن</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>اهمال متابعة المخالفات</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>مباشرة حالة دون تفعيل النظام</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>إهمال التقارير اليومية</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>عدم الرد على النداءات</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>مقاطعة البلاغات الإدارية</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>مباشرة الميدان بدون تنسيق</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>تغيير مدة العقوبة بدون وجه حق</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>اخذ غفوة اكثر من 10 دقائق</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>عدم تشغيل أدوات التوثيق الرقابي</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>اخذ غفوة بدون اذن أو تسجيل خروج فجائي</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+                        <tr><td>عدم الإلتزام بالتعميمات المحددة</td><td>-</td><td><span style="color:#fbbf24; font-weight:bold;">تحذير</span></td></tr>
+
+                        <tr class="table-separator">
+                            <td colspan="3">مخالفات من الدرجة الثانية والثالثة والرابعة</td>
+                        </tr>
+                        <tr>
+                            <td>تجاوزات الإجراءات والتدخلات غير المصرح بها وإعاقة العمل الإداري</td>
+                            <td>-</td>
+                            <td><span style="color:#f87171; font-weight:bold;">انذار وظيفي / خصم نقاط / سحب صلاحيات</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="escape" class="page">
+            <h2 style="border-right: 4px solid var(--accent); padding-right: 15px; margin-bottom:20px;">بروتوكولات الرقابة</h2>
+            <div class="cards">
+                <div class="card" style="padding:20px;">
+                    <h3>بروتوكولات العمل الإداري والميداني للرقابة</h3>
+                    <p style="color:#aaa; font-size:14px; line-height:1.8;">
+                        - الالتزام التام بتوجيهات Supervisor في متابعة وتوجيه المراقبين.<br>
+                        - التنسيق الكامل مع Report Manager  لضمان سرعة معالجة شكاوى اللاعبين وتذاكر الدعم.<br>
+                        - مراجعة ساعات العمل والنقاط الخاصة بكل مراقب بشكل دوري لضمان تحقيق الحد الأدنى المطلوب أسبوعياً.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+      
+        </div>
+
+       <footer>
+        <section class="footer-cta" id="cta">
+            <p class="section-tag reveal">INFO</p>
+            <h2 class="section-title reveal reveal-d1">Build Your Website<br><strong>starts here</strong></h2>
+            <div class="footer-ctas reveal reveal-d3">
+                <a href="https://zkxb5.github.io/Spy-Master/" class="btn-primary">Spy Master</a>
+                <a href="https://discord.gg/kqn8HxNTH" class="btn-secondary">Contact</a>
+            </div>
+
+            <div class="footer-bar reveal reveal-d4" style="margin-top: 80px;">
+                <div class="footer-brand">Scary Town | By Al-Shiekh</div>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Status</a>
+                    <span class="footer-credit"><i class="fab fa-instagram"></i> Instagram: <a href="https://www.instagram.com/zkxb5?igsh=bDY1MmFnOHJnMG96" target="_blank" rel="nofollow">Zkxb5</a></span>
+                    <span class="footer-credit"><i class="fab fa-discord"></i> Discord: <a href="https://discord.gg/mcjus5PKmP" target="_blank" rel="nofollow">Zkxb5</a></span>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="spy-scripts.js"></script>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle"></h2>
+            <div class="separator"></div>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+</body>
+</html>
