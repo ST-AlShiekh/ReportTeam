@@ -8,58 +8,109 @@
     <link rel="stylesheet" href="spy-style.css">
     <script src="spy-scripts.js" defer></script>
     <style>
-        .table-wrapper table {
-            border-collapse: separate;
-            border-spacing: 0 10px;
-            width: 100%;
-        }
-        .table-wrapper th {
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.25), rgba(59, 30, 30, 0.95));
-            color: #ffffff;
-            padding: 16px 20px;
-            font-weight: 700;
-            font-size: 15px;
-            letter-spacing: 0.5px;
-            border-bottom: 3px solid #ff0000;
-            text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
-        }
-        .table-wrapper td {
-            background: rgba(59, 30, 30, 0.75);
-            padding: 14px 20px;
-            color: #f1f5f9;
-            font-size: 14px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        .table-wrapper tr:hover td {
-            background: rgba(255, 0, 0, 0.12);
-            border-color: rgba(255, 0, 0, 0.4);
-            color: #ffffff;
-            transform: scale(1.003);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-        .table-wrapper tr.table-separator td {
-            background: linear-gradient(90deg, rgba(255, 0, 0, 0.3), rgba(42, 15, 15, 0.8));
-            color: #ff0000;
-            font-weight: bold;
-            font-size: 15px;
-            text-align: right;
-            padding: 12px 18px;
-            border-radius: 6px;
-            border: 1px solid rgba(255, 0, 0, 0.3);
-            text-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
-        }
-        .badge-luxury {
-            background: linear-gradient(135deg, #ff0000, #ff0000);
-            color: #ffffff;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            box-shadow: 0 0 12px rgba(255, 0, 0, 0.5);
-            display: inline-block;
-        }
+/* ==========================================
+   تنسيق جداول الإدارة - الرتبة الرقابية البيضاء الفاخرة
+   ========================================== */
+
+/* تحسين هيدر قسم إدارة الرقابة */
+#clauses h2 {
+    border-right: 4px solid #ffffff !important;
+    color: #ffffff !important;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8) !important;
+    padding-right: 15px;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+/* تنسيق حاوية الجدول */
+#clauses .table-wrapper {
+    background: rgba(12, 12, 14, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.05) !important;
+    border-radius: 14px !important;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+}
+
+#clauses table {
+    border-collapse: separate !important;
+    border-spacing: 0 8px !important;
+    width: 100%;
+    padding: 10px;
+}
+
+/* رؤوس الجدول (Headers) */
+#clauses th {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(30, 30, 35, 0.95)) !important;
+    color: #ffffff !important;
+    padding: 18px 20px !important;
+    font-weight: 800 !important;
+    font-size: 15px !important;
+    letter-spacing: 1px !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4) !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6) !important;
+    text-align: center;
+}
+
+/* صفوف الجدول (Rows) */
+#clauses td {
+    background: rgba(22, 22, 26, 0.85) !important;
+    padding: 16px 20px !important;
+    color: #e2e8f0 !important;
+    font-size: 14px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    text-align: center;
+}
+
+/* تأثير مرور الماوس على الصفوف (Hover) */
+#clauses tr:hover td {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1) !important;
+}
+
+/* الفواصل الإدارية بين الرتب (Table Separators) */
+#clauses tr.table-separator td {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(15, 15, 18, 0.95), rgba(255, 255, 255, 0.15)) !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    font-size: 15px !important;
+    text-align: center !important;
+    padding: 14px 20px !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.9) !important;
+    letter-spacing: 1.5px;
+}
+
+/* الشارات الفاخرة للرتب والمسؤوليات (Badges) */
+.badge-admin-lead {
+    background: linear-gradient(135deg, #ffffff, #b0b0b0) !important;
+    color: #050505 !important;
+    padding: 6px 16px !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6) !important;
+    display: inline-block;
+}
+
+.badge-admin-sub {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #f1f5f9 !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    padding: 6px 14px !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    backdrop-filter: blur(5px);
+    display: inline-block;
+}
     </style>
 </head>
 <body>
@@ -124,7 +175,10 @@
                     <small>
     <p><strong>المهام اليومية المطلوبة:</strong></p>
 
-    <p>• مراقبة عامة لمدة لا تقل عن ساعة يومياً.</p>
+    <p>• مراقبة عامة لمدة لا تقل عن 3 ساعات يومياً.</p>
+
+<p>• يجب تسجيل الدخول عبر <a href="https://discord.com/channels/1232987772252327946/1491412184415211520" target="_blank" class="discord-link"><i class="fab fa-discord"></i> بوت الرقابة</a></p>
+
 
     <p>• استلام تذاكر الشكاوى الخاصة باللاعبين والعمل على حلها.</p>
 
@@ -234,62 +288,56 @@
     </div>
 
  
-        <div id="clauses" class="page">
-            <h2 style="border-right: 4px solid var(--accent); padding-right: 15px; margin-bottom:20px;">منسوبي إدارة الرقابة </h2>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>الأسم</th>
-                            <th>الرتبة</th>
-                            <th>المسؤوليات</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="table-separator">
-                            <td colspan="3">Spectate Manager & Assistants</td>
-                        </tr>
-                        <tr>
-                            <td><strong style="color: #ffffff; font-size: 15px;">ST | abo soso</strong></td>
-                            <td><span class="badge-luxury">Spectate Manager</span></td>
-                            <td><span class="badge-luxury">إدارة المسؤولية بشكل كامل و مراقبة منسوبيها</span></td>
-
-                        </tr>
-                        <tr>
-                            <td><strong style="color: #ffffff; font-size: 15px;">Noone</strong></td>
-                            <td><span class="badge-luxury">Assistant Spectate Manager</span></td>
-                            <td><span class="badge-luxury">المساعدة في إدارة المسؤولية</span></td>
-
-                        </tr>
-                        
-                        <tr class="table-separator">
-                            <td colspan="3">Spectate Supervisors</td>
-                        </tr>
-                        <tr>
-                            <td><strong style="color: #ffffff; font-size: 15px;">ST | 𝑀𝒶𝓇𝓈𝒽𝒶𝓁𝓁</strong></td>
-                            <td><span class="badge-luxury">Supervisor</span></td>
-                            <td><span class="badge-luxury">الإشراف والمتابعة الميدانية </span></td>
-
-                        </tr>
-                        <tr>
-                            <td><strong style="color: #ffffff; font-size: 15px;">ST | 𝐀𝐥-𝐒𝐡𝐢𝐞𝐤𝐡</strong></td>
-                            <td><span class="badge-luxury">Supervisor</span></td>
-                            <td><span class="badge-luxury">الإشراف والمتابعة الميدانية </span></td>
-
-                        </tr>
-
-    <tr>
-                            <td><strong style="color: #ffffff; font-size: 15px;">ST | Just Maan</strong></td>
-                            <td><span class="badge-luxury">Supervisor</span></td>
-                            <td><span class="badge-luxury">الإشراف والمتابعة الميدانية </span></td>
-
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
+       <div id="clauses" class="page">
+    <h2>منسوبي إدارة الرقابة</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>الاسم</th>
+                    <th>الرتبة الإدارية</th>
+                    <th>المسؤوليات والإشراف</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Report Manager & Assistants -->
+                <tr class="table-separator">
+                    <td colspan="3">👑 Report Manager & Assistants</td>
+                </tr>
+                <tr>
+                    <td><strong style="color: #ffffff; font-size: 15px; text-shadow: 0 0 8px rgba(255,255,255,0.5);">ST | abo soso</strong></td>
+                    <td><span class="badge-admin-lead">Spectate Manager</span></td>
+                    <td><span class="badge-admin-sub">إدارة المسؤولية بشكل كامل ومراقبة منسوبيها</span></td>
+                </tr>
+                <tr>
+                    <td><strong style="color: #ffffff; font-size: 15px; text-shadow: 0 0 8px rgba(255,255,255,0.5);">Noone</strong></td>
+                    <td><span class="badge-admin-lead">Assistant Spectate Manager</span></td>
+                    <td><span class="badge-admin-sub">المساعدة في إدارة وتوجيه المسؤولية</span></td>
+                </tr>
+                
+                <!-- Supervisors -->
+                <tr class="table-separator">
+                    <td colspan="3">⭐ Supervisors</td>
+                </tr>
+                <tr>
+                    <td><strong style="color: #ffffff; font-size: 15px; text-shadow: 0 0 8px rgba(255,255,255,0.5);">ST | 𝑀𝒶𝓇𝓈𝒽𝒶𝓁𝓁</strong></td>
+                    <td><span class="badge-admin-sub" style="color: #ffffff; border-color: rgba(255,255,255,0.5);">Supervisor</span></td>
+                    <td><span class="badge-admin-sub">الإشراف والمتابعة الميدانية</span></td>
+                </tr>
+                <tr>
+                    <td><strong style="color: #ffffff; font-size: 15px; text-shadow: 0 0 8px rgba(255,255,255,0.5);">ST | 𝐀𝐥-𝐒𝐡𝐢𝐞𝐤𝐡</strong></td>
+                    <td><span class="badge-admin-sub" style="color: #ffffff; border-color: rgba(255,255,255,0.5);">Supervisor</span></td>
+                    <td><span class="badge-admin-sub">الإشراف والمتابعة الميدانية</span></td>
+                </tr>
+                <tr>
+                    <td><strong style="color: #ffffff; font-size: 15px; text-shadow: 0 0 8px rgba(255,255,255,0.5);">ST | Just Maan</strong></td>
+                    <td><span class="badge-admin-sub" style="color: #ffffff; border-color: rgba(255,255,255,0.5);">Supervisor</span></td>
+                    <td><span class="badge-admin-sub">الإشراف والمتابعة الميدانية</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
         <div id="laws" class="page">
             <h2 style="border-right: 4px solid #00d9ff; padding-right: 15px; margin-bottom:20px; color: #fff; text-shadow: 0 0 10px #00d9ff;">لوحة مخالفات بنود وساعات ونقاط الرقابة</h2>
 
