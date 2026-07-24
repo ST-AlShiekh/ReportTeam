@@ -431,7 +431,7 @@ footer {
     left: 100%;
 }
 
-/* تأثير الهوفر الفخم (إضاءة بيضاء فضية متوهجة) */
+/* تأثير الهوفر) */
 .hero .btn:hover {
     background: linear-gradient(135deg, #ffffff, #e0e0e0);
     color: #000000;
@@ -443,4 +443,27 @@ footer {
 
 .hero .btn:active {
     transform: translateY(-1px) scale(0.98);
+}
+
+
+/* تنسيق رابط الديسكورد  */
+.discord-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.discord-link:hover {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
 }
