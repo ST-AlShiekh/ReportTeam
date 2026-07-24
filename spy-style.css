@@ -1,7 +1,7 @@
 :root {
-    --primary: #ff0033;
-    --primary-glow: rgba(255, 0, 51, 0.6);
-    --accent: #ff3344;
+    --primary: #ffffff;
+    --primary-glow: rgba(189, 154, 161, 0.6);
+    --accent: #ffffff;
     --bg-dark: #080203;
     --glass: rgba(20, 0, 5, 0.45);
     --glass-border: rgba(255, 0, 51, 0.2);
@@ -64,7 +64,7 @@ nav {
 .logo { 
     font-size: clamp(18px, 4vw, 24px); 
     font-weight: 900; 
-    color: #ff1a40; 
+    color: #f7f2f3; 
     text-shadow: 0 0 12px var(--primary), 0 0 25px var(--primary);
     letter-spacing: 1px;
     animation: pulseGlow 2s infinite ease-in-out;
@@ -116,7 +116,7 @@ nav .links a:hover {
 
 #search-results { position: absolute; top: 110%; left: 0; right: 0; background: rgba(12, 2, 5, 0.98); backdrop-filter: blur(20px); border-radius: 12px; border: 1px solid var(--glass-border); max-height: 300px; overflow-y: auto; z-index: 2000; display: none; box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
 .result-item { padding: 12px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); cursor: pointer; text-align: center; transition: 0.2s; font-size: 14px; }
-.result-item:hover { background: rgba(255, 0, 51, 0.15); }
+.result-item:hover { background: rgba(253, 253, 253, 0.15); }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr)); gap: 20px; width: 100%; text-align: center; }
 .card { background: rgba(18, 3, 6, 0.5); border: 1px solid var(--glass-border); border-radius: 15px; padding: 0; overflow: hidden; backdrop-filter: blur(10px); transition: 0.4s; display: flex; flex-direction: column; height: 100%; align-items: center; }
@@ -166,15 +166,15 @@ td:nth-child(2) { color: #ff3355; font-family: 'Courier New', monospace; font-we
 
 .table-separator td {
     background: rgba(15, 2, 4, 0.9) !important;
-    color: #ff3355 !important;
+    color: #f8f2f3 !important;
     text-align: center !important;
     font-weight: bold;
     font-size: 1.1rem;
     padding: 15px 0 !important;
     letter-spacing: 2px;
-    border-top: 1px solid rgba(255, 51, 85, 0.3);
-    border-bottom: 1px solid rgba(255, 51, 85, 0.3);
-    text-shadow: 0 0 12px rgba(255, 51, 85, 0.8);
+    border-top: 1px solid rgba(250, 247, 247, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 12px rgba(240, 237, 238, 0.8);
 }
 
 .badge-blue { background: var(--primary); color: white; padding: 4px 8px; border-radius: 4px; font-size: 10px; box-shadow: 0 0 8px var(--primary); }
@@ -432,7 +432,7 @@ footer {
 
 /* تأثير الهوفر الفخم (إضاءة حمراء متوهجة وارتفاع خفيف) */
 .hero .btn:hover {
-    background: linear-gradient(135deg, #ff0033, #cc0029);
+    background: linear-gradient(135deg, #fcfbfb, #f5f3f3);
     color: #ffffff;
     border-color: #ff3355;
     transform: translateY(-4px) scale(1.03);
